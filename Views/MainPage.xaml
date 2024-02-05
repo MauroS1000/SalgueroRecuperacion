@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SalgueroRecuperacion.MainPage">
+
+    <StackLayout>
+        <Label Text="Elija una Raza" 
+    FontSize="Subtitle" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0" TextColor="Black" />
+        <Entry x:Name="RazaEntry" Text="{Binding Raza}"  TextColor="Black"/>
+        
+            <ListView x:Name="RazasListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Image x:Name="ImagenPerro" Aspect="AspectFit" HeightRequest="350" WidthRequest="350" />
+        <Button Text="Siguiente" Clicked="OnMostrarSiguienteImagenClicked" BackgroundColor="CadetBlue" TextColor="White" />
+
+
+
+
+    </StackLayout>
+</ContentPage>
